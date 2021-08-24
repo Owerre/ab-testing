@@ -1,8 +1,8 @@
 # Project Overview
 
-An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured the average revenue-per-user (ARPU) as the outcome (metric) for each customer. The experiment was conducted by randomly assigning customers to the treatment with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
+An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured revenue-per-user  as the outcome (metric) for each customer. The experiment was conducted by randomly assigning customers to the treatment with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
 
-In this project, I have implemented different statistical tests on the data in order to validate if the new feature has a positive impact on the revenue. This is done by establishing a statistically significant result.  For pedagogical purposes, I have implemented the following two sample statistical tests:
+In this project, I have implemented different statistical tests on the data in order to validate if the new feature has a positive impact on revenue. This is done by establishing a statistically significant result.  For pedagogical purposes, I have implemented the following two sample statistical tests:
 
 1). Student's t-test
 
@@ -15,12 +15,12 @@ In this project, I have implemented different statistical tests on the data in o
 Below are some figures from exploratory data anaysis.
 
 ## 1. Treatment and Control Groups
-The distribution of ARPU is highly right skewed as expected, since some customers spent more than others. Therefore, I have transformed it by log base 10. The mean of ARPU in the treatment group is higher than the control group. I need to establish if the difference is statistically significant. 
+The distribution of revenue-per-user is highly right skewed as expected, since some customers spent more than others. Therefore, I have transformed it by log base 10. The mean of revenue-per-user in the treatment group is higher than the control group. I need to establish if the difference is statistically significant. 
 
 ![fig](images/fig1.png)
 
 ## 2. Segmentation by Phone Operating Systems
-The distributions below show segmentation by phone operating systems within the treatment and control groups. The results show disproportionality in the number of customers and total ARPU across the phone operating systems.
+The distributions below show segmentation by phone operating systems within the treatment and control groups. The results show disproportionality in the number of customers and total revenue-per-user across the phone operating systems.
 
 In practice, any interesting feature in the data should be investigated by invoking the Twyman's law. For instance, one might want to investigate if the new feature is compactible with different phone operating systems.
 
