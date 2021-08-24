@@ -1,6 +1,6 @@
 # Project Overview
 
-An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured the average revenue-per-user (ARPU) as the outcome (sucess metric) for each customer. The experiment was conducted by randomly assigning customers to the treatement with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
+An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured the average revenue-per-user (ARPU) as the outcome (metric) for each customer. The experiment was conducted by randomly assigning customers to the treatement with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
 
 In this project, I have implemented different statistical tests on the data in order to validate if the new feature has a positive impact on the revenue. This is done by establishing a statistically significant result.  For pedagogical purposes, I have implemented the following two sample statistical tests:
 
