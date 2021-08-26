@@ -12,7 +12,7 @@ In this project, I have implemented different statistical tests on the data in o
 
 
 # Data Exploration
-Below are some figures from exploratory data anaysis.
+Below are some figures from exploratory data analysis.
 
 ## 1. Treatment and Control Groups
 The distribution of revenue is highly right skewed as expected, since some customers spent more than others. Therefore, I have transformed it by log base 10. The mean of revenue (i.e., revenue-per-user) in the treatment group is higher than the control group. I need to establish if the difference is statistically significant. 
