@@ -1,6 +1,6 @@
 # Project Overview
 
-An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured the revenue as the outcome for each customer. The experiment was conducted by randomly assigning customers to the treatment with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
+An e-commerce company conducted an A/B testing experiment to test if a new feature they recently introduced in their website through mobile app will increase revenue. They have measured the revenue as the outcome for each user (customer). The experiment was conducted by randomly assigning customers to the treatment with the new feature or the control without the new feature, at equal traffic. I have assumed that power analysis was conducted prior to performing this experiment.
 
 In this project, I have implemented different statistical tests on the data in order to validate if the new feature has a positive impact on revenue. This is done by establishing a statistically significant result.  For pedagogical purposes, I have implemented the following two sample statistical tests:
 
