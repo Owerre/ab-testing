@@ -1,0 +1,164 @@
+\documentclass[aps,twocolumn,floatfix, nofootinbib, superscriptaddress]{revtex4-1}
+\usepackage[pdftex]{graphicx}% Include figure files
+ \usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{cellspace}%
+\setlength\cellspacetoplimit{3pt}
+\setlength\cellspacebottomlimit{3pt}
+\usepackage{makecell}
+\setcellgapes{3pt}
+ \usepackage{amsmath} 
+  \usepackage{flushend}
+%\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,urlcolor=blue,citecolor=blue]{hyperref}
+\usepackage{color}
+\usepackage{longtable}
+%\usepackage{widetext}
+\usepackage{amsfonts} 
+\usepackage{amssymb, mathrsfs}
+\usepackage{braket}
+\usepackage{graphicx} 
+\usepackage{diagbox}
+\usepackage{subfigure}
+\usepackage{bbm}
+\begin{document}
+
+\date{\today}
+\title{Probability Problems and Solutions}
+\author{Solomon Owerre}
+\email{alaowerre@gmail.com}
+
+
+
+\maketitle
+
+\section{Problems}
+
+\subsection{Problem: Craps}
+The casino game of craps is played as follows:
+\begin{enumerate}
+\item The player rolls a pair of standard 6-sided dice and takes their sum
+
+\begin{enumerate}
+\item If the sum is 7 or 11, then the player wins and the game is over.
+\item If the sum is 2, 3, or 12, then the player loses (this is called “crapping out”) and
+the game is over.
+\item If the sum is anything else, then we record the sum (lets call it “X”) and continue
+to the next step.
+\end{enumerate}
+
+\item The player then re-rolls the dice and takes their sum
+\begin{enumerate}
+\item  If the sum is X, the player wins and the game is over
+\item  If the sum is 7, the player loses and the game is over
+\item  If the sum is anything else, repeat step 2.
+\end{enumerate}
+\end{enumerate}
+
+Now suppose that you notice something odd - one of the two dice isn't balanced that well, and always comes up in the range 2-5 (with equal probability) but never 1 or 6.
+\begin{enumerate}
+\item For each number between 2 and 12, what is the probability of rolling the dice so that they sum to that number?
+\item
+\begin{enumerate}
+\item What’s the probability of winning on the very first roll?
+\item What’s the probability of losing (“crapping out”) on the very first roll?
+\end{enumerate}
+\item Suppose that on the first roll, you do not win or lose, but rather, you get the sum X, which has roll probability p. Given that you have already made it to this point, what’s your chance of winning going forward?
+\item If you play the game of craps with these two dice, you will get one dollar if you win, and lose one dollar if you lose, then what is the expected return for playing the game?
+\end{enumerate}
+
+
+\section{Solutions}
+\subsection{Solution: Craps}
+Suppose the two dice are coloured white and black. We are told that one of the two dice isn't balanced that well, and always comes up in the range 2-5 (with equal probability) but never 1 or 6. Suppose, the unbalanced  dice is the white one, and each outcome is labeled as $(n_{\text{black}}, n_{\text{white}})$, then the event $\bar{E}$ given by 
+ \begin{align}
+\bar{E} = & \big\{ (1,1), (2,1), (3,1), (4,1), (5,1), (6,1), \nonumber\\&(1,6), (2,6), (3,6), (4,6), (5,6), (6,6)\big\},
+\end{align} 
+ cannot occur.   
+ 
+ Therefore, the total number of possible outcomes is $N = 6^2 -12 = 24$ as shown in Table~\ref{tab}.
+ 
+ \begin{table}[ht]
+ \caption{Sample space $\Omega$ of the problem}
+ \label{tab}
+\centering
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+  \diagbox{black dice}{white dice} &2 &3 &4 &5\\  \hline
+  1 &(1,2) &(1,3) &(1,4) &(1,5)\\ 
+  2 &(2,2) &(2,3) &(2,4) &(2,5)\\ 
+  3 &(3,2) &(3,3) &(3,4) &(3,5)\\
+  4 &(4,2) &(4,3) &(4,4) &(4,5)\\ 
+  5 &(5,2) &(5,3) &(5,4) &(5,5)\\
+  6 &(6,2) &(6,3) &(6,4) &(6,5)\\  \hline
+\end{tabular}
+\end{table}
+
+Let  $Y$ denote a random variable representing the sum of the numbers on the two dice. The solutions to the problems are given below.
+\begin{enumerate}
+	\item For each number between $2$ and $12$, what is the probability of rolling the dice so that they sum to that number?
+	The probability of rolling the dice so that they sum to  each number between $2$ and $12$ is given by
+ \begin{table}[ht]
+ \caption{Probability of $Y$ between $2$ and $12$}
+ \label{tab2}
+\centering
+    \begin{tabular}{l|ccccccccccc}
+    \toprule
+    {$y$} &  {2 } &{3}&{4}&{5}&{6}&{7}&{8}&{9}&{10}&{11}&{12} \\  \midrule
+   $P(Y=y)$  & {0} &{$\dfrac{1}{24}$}&{$\dfrac{1}{12}$}&{$\dfrac{1}{8}$}&{$\dfrac{1}{6}$}&{$\dfrac{1}{6}$}&{$\dfrac{1}{6}$}&{$\dfrac{1}{8}$}&{$\dfrac{1}{12}$}&{$\dfrac{1}{24}$}&{0} \\  \midrule
+    \end{tabular}
+    \end{table}
+    
+    \item[2 (a).] What's the probability of winning on the very first roll?
+    
+     Since $Y=7$ and $Y =11$ are mutually exclusive events, the probability of winning on the very first roll is
+    \begin{align}
+    	& P(Y = 7 ~{\text OR}~ Y= 11)   =  
+	 P(Y = 7) + P(Y = 11)  \nonumber\\&=  \frac{1}{6} + \frac{1}{24} = \frac{5}{24} 
+    \end{align}
+    
+    \item[2 (b).]What's the probability of losing (``crapping out'') on the very first roll? 
+    
+    The probability of losing on the very first roll is
+    \begin{align}
+    	& P(Y = 2 ~{\text OR}~ Y= 3 ~{\text OR}~ Y= 12)  \nonumber\\& = P(Y = 2) + P(Y = 3) + P(Y = 12) = \frac{1}{24} 
+    \end{align}
+    \item[3.] Suppose that on the first roll, you do not win or lose, but rather, you get the sum $X$, which has roll probability $p$. Given that you have already made it to this point, what's your chance of winning going forward?
+    
+     In the second phase of the game, the sample space consists of all possible outcomes that sum to $X$ and $7$, since you win or loss when $X$ or $7$ shows up respectively.   Let $W$ denote the event of winning going forward, and let $B_j~(j = 1,2,3,4,5,6)$ represents a set of mutually exclusive events of obtaining a sum $X = 4,5,6,8,9,10$ respectively. The probabilities $P(B_j)$ are given in Table \ref{tab2}. Next, let's compute the conditional probability of winning given a sum $X$:
+     \begin{align}
+     &\text {For}~ X = 4, \quad B_1 = \lbrace (1,3), (2,2)\rbrace; \nonumber\\& \Omega = \lbrace (1,3), (2,2),(2,5),(3,4),(4,3), (5,2)\rbrace \nonumber \\& P(W|B_1) = \frac{2}{6}.\\&
+     \text {For}~ X = 5, \quad B_2 = \lbrace (1,4), (2,3), (3,2)\rbrace; \nonumber\\&\Omega = \lbrace (1,4), (2,3), (3,2),(2,5),(3,4),(4,3), (5,2)\rbrace \nonumber \\& P(W|B_2) = \frac{3}{7}.\\&
+     \text {For}~  X = 6, \quad B_3 = \lbrace (1,5), (2,4), (3,3), (4,2)\rbrace; \nonumber\\&\Omega = \lbrace (1,5), (2,4), (3,3), (4,2),(2,5),(3,4),(4,3), (5,2)\rbrace\nonumber \\&P(W|B_3) = \frac{4}{8}.\\&
+      \text {For}~ X = 8, \quad B_3 = \lbrace (3,5), (4,4), (5,3), (6,2)\rbrace; \nonumber\\&\Omega = \lbrace (3,5), (4,4), (5,3), (6,2),(2,5),(3,4),(4,3), (5,2)\rbrace\nonumber \\&P(W|B_4) = \frac{4}{8}.\\&
+    \text {For}~   X = 9, \quad B_5 = \lbrace (4,5), (5,4), (4,3)\rbrace; \nonumber\\&\Omega = \lbrace (4,5), (5,4), (4,3),(2,5),(3,4),(4,3), (5,2)\rbrace\nonumber \\&P(W|B_5) = \frac{3}{7}.\\&
+    \text {For}~   X = 10, \quad B_6 = \lbrace (5,5), (6,4),\rbrace; \nonumber\\&\Omega = \lbrace  (5,5), (6,4),(2,5),(3,4),(4,3), (5,2)\rbrace\nonumber \\&P(W|B_6) = \frac{2}{6}
+     \end{align}
+     Using the total probability formula, the chance of winning is given by
+     \begin{align}
+     	P(W)  &= \sum_{j=1}^{6}P(W|B_j)P(B_j) \nonumber\\& =\left(\frac{2}{6}\right)\left(\frac{1}{12}\right)+\left(\frac{3}{7}\right)\left(\frac{1}{8}\right) + \left(\frac{4}{8}\right)\left(\frac{1}{6}\right)  \nonumber\\&+ \left(\frac{4}{8}\right)\left(\frac{1}{6}\right) + \left(\frac{3}{7}\right)\left(\frac{1}{8}\right) + \left(\frac{2}{6}\right)\left(\frac{1}{12}\right) \nonumber\\& = \left(\frac{2}{3}\right)\left(\frac{1}{3}\right) + \left(\frac{3}{7}\right)\left(\frac{1}{4}\right)  \nonumber\\&= \frac{83}{252}
+     \end{align}
+
+\item[4.] If you play the game of craps with these two dice, you will get one dollar if you win, and lose one dollar if you lose, then what is the expected return for playing the game?
+
+The total probability of winning the game of craps with these two dice is the probability of winning in the first stage plus the probability of winning in the second stage, which is given by
+\begin{align}
+     	P^{\text{total}}(W) = \frac{5}{24} + \frac{83}{252} = \frac{271}{504}
+     \end{align}
+Let $L$ denote the event of losing the game. The total probability of losing the game of craps with these two dice is
+\begin{align}
+     	P^{\text{total}}(L) = 1- P^{\text{total}}(W) =\frac{233}{504}
+     \end{align}
+     
+ Let Y denote the winning for one dollar. The expected return is 
+\begin{align}
+     	E(Y) & = \sum_{y\in (-1,1)}yP(y)  \nonumber\\&= 1\times \frac{271}{504} + (-1)\times \frac{233}{504}   \nonumber\\&
+	= \frac{38}{504} = \frac{19}{252} 
+     \end{align}
+     
+     \end{enumerate}
+\end{document}
+
