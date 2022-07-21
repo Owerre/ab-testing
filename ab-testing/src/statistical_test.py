@@ -1,8 +1,8 @@
-####################################
+###############################
 # Author: S. A. Owerre
 # Date modified: 24/07/2021
 # Class: Statistical Tests
-####################################
+###############################
 
 # filter warnings
 import warnings
@@ -12,18 +12,15 @@ warnings.filterwarnings("ignore")
 from scipy import stats
 
 class StatisticalTest:
-    """
-    Class for conducting parametric and non-parametric statistical tests
-    """
+    """Parametric and non-parametric statistical tests."""
+
     def __init__(self):
-        """
-        Define default parameters
-        """
+        """Define default parameters."""
     
     def student_ttest(self, treat_sample, contr_sample):
         """
         Compute the test statistic and the p-value 
-        for a two-sample Student's t-test
+        for a two-sample Student's t-test.
 
         Parameter
         ---------
@@ -42,7 +39,7 @@ class StatisticalTest:
     def welch_ttest(self, treat_sample, contr_sample):
         """
         Compute the test statistic and the p-value 
-        for a two-sample Welch's t-test
+        for a two-sample Welch's t-test.
 
         Parameter
         ---------
@@ -61,7 +58,7 @@ class StatisticalTest:
     def mann_whitney_utest(self, treat_sample, contr_sample):
         """
         Compute the U statistic and the p-value 
-        for a two-sample Mann-Whitney U test
+        for a two-sample Mann-Whitney U test.
 
         Parameter
         ---------
