@@ -71,5 +71,5 @@ class StatisticalTest:
         """
         x = treat_sample.tolist()
         y = contr_sample.tolist()
-        u, pval = stats.mannwhitneyu(x, y, use_continuity=True)
+        u, pval = stats.mannwhitneyu(x, y, use_continuity=True, alternative='two-sided')
         return u,pval
