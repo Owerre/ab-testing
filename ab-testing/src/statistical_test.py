@@ -15,6 +15,7 @@ class StatisticalTest:
 
     def __init__(self):
         """Define default parameters."""
+        pass
 
     def student_ttest(self, treat_sample, contr_sample):
         """Compute the test statistic and the p-value
@@ -22,8 +23,8 @@ class StatisticalTest:
 
         Parameter
         ---------
-        treat_sample: pandas series of treatment sample
-        contr_sample: pandas series of control sample
+        treat_sample (Pandas Series): treatment sample
+        contr_sample (Pandas Series): control sample
 
         Return
         ------
@@ -42,8 +43,8 @@ class StatisticalTest:
 
         Parameter
         ---------
-        treat_sample: pandas series of treatment sample
-        contr_sample: pandas series of control sample
+        treat_sample (Pandas Series): treatment sample
+        contr_sample (Pandas Series): control sample
 
         Return
         ------
@@ -62,8 +63,8 @@ class StatisticalTest:
 
         Parameter
         ---------
-        treat_sample: pandas series of treatment sample
-        contr_sample: pandas series of control sample
+        treat_sample (Pandas Series): treatment sample
+        contr_sample (Pandas Series): control sample
 
         Return
         ------
